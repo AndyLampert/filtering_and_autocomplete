@@ -25,12 +25,12 @@
 
     <tbody>
     <%= content_tag_for(:tr, @users) do |user| %>
-      <td><%= user.first_name %></td>
-      <td><%= user.last_name %></td>
-      <td><%= user.address_line %></td>
-      <td><%= user.city %></td>
-      <td><%= user.state %></td>
-      <td><%= user.zip %></td>
+      <td><%= link_to 'First Name', sort: 'first_name' %></td>
+      <td><%= link_to 'Last Name', sort: 'last_name' %></td>
+      <td><%= link_to 'Address Link', sort: 'address_line' %></td>
+      <td><%= link_to 'City', sort: 'city' %></td>
+      <td><%= link_to 'State', sort: 'state' %></td>
+      <td><%= link_to 'Zip', sort: 'zip' %></td>
       <td><%= image_tag(user.avatar) %></td>
       <td><%= link_to 'Show', user %></td>
       <td><%= link_to 'Edit', edit_user_path(user) %></td>
